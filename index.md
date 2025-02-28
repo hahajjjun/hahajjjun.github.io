@@ -21,4 +21,4 @@ Undergraduate student @ Yonsei University, College of Medicine.
 - Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Jan 2025`
 
 ## Publications
-1. **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, Junha Park, Byungjin Hwang ${^*}{^\dagger}$ [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+1. **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
