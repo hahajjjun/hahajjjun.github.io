@@ -25,12 +25,13 @@ Coarsely we can consider two categories of GRN inference algorithms;
 2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$.
 
 For instance if the first category, we consider CellOracle[2] and NetREX-CF[3]. Their loss function can be represented in a unified framework;
-$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,P)}]$ (Eq)
+$$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,P)}]$$
+
 The first term stands for the data fit loss, and the remainder stands for the regularization term with respect to the prior information $P$.
 
 ---
-**Proposition 1.** CellOracle regression model is an instance of unified framework (Eq).
+**Proposition 1.** CellOracle regression model is an instance of unified framework.
 
-**Proposition 2.** NetREX-CF regression model is an instance of unified framework (Eq).
+**Proposition 2.** NetREX-CF regression model is an instance of unified framework.
 
 ---
