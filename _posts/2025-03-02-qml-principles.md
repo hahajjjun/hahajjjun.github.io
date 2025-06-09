@@ -21,8 +21,8 @@ Inspired by the recent review of [1], I'd like to share one perspective on under
 Gene regulatory network(GRN), is defined as a directed, weighted graph with each node represents genes that could be a regulator or target. Here, let’s describe a GRN with regulatory influence matrix $\Theta \in \mathbb{R}^{p \times p}$, where $p$ is the number of nodes(genes) composing the GRN. Some works limit transcription factor(TF) as active regulator among genome-wide candidates, so $\Theta \in \mathbb{R}^{q \times p}$ for this case where $q$ is the number of selected TFs to compose GRN.
 
 Coarsely we can consider two categories of GRN inference algorithms; </br>
-1) directly inferring $\Theta$ from given scRNA-seq data $X$ with regularization term to incorporate external knowledge $\Omega$ <\br>
-2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$.
+1) directly inferring $\Theta$ from given scRNA-seq data $X$ with regularization term to incorporate external knowledge $\Omega$ </br>
+2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$. </br>
 
 For instance if the first category, we consider CellOracle[2] and NetREX-CF[3]. Their loss function can be represented in a unified framework;
 $$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,P)}]$$
@@ -30,7 +30,7 @@ $$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Th
 The first term stands for the data fit loss, and the remainder stands for the regularization term with respect to the prior information $P$.
 
 ---
-**Proposition 1.** CellOracle regression model is an instance of unified framework.
+**Proposition 1.** CellOracle regression model is an instance of unified framework. </br>
 *proof sketch.*
 CellOracle regression model is based on LASSO regression, and candidate regulators are limited to the pre-defined set informed by the prior knowledge.
 
