@@ -8,6 +8,10 @@ comments: true
 categories: ["Annotated BI"]
 ---
 
+Understanding how genes regulate each other is central to unraveling the complex circuitry of cellular life. 
+Gene regulatory networks (GRNs) offer a blueprint of these intricate molecular conversations. 
+With the advent of multiplexed, high-throughout, and multi-modal measurements, new computational models now seek to infer GRNs with unprecedented granularity.
+
 ### Motivation
 Recently, several sporadic reports provide a clue about the shape of underlying topology of GRN; we can make theoretical hypotheses about the relationship between the amount of information about GRN which can be extracted from diverse modalities of observation. Which provides a more granular view of GRN? Gene expression patterns, mainly co-expression, from scRNA-seq data? Or the counterparts obtained from causal studies such as perturb-seq? Is there any underlying inequality that holds for the information from two types of observation?
 
@@ -27,7 +31,7 @@ Gene regulatory network(GRN), is defined as a directed, weighted graph with each
 
 Coarsely we can consider two categories of GRN inference algorithms; <br/>
 1) directly inferring $\Theta$ from given scRNA-seq data $X$ with regularization term to incorporate external knowledge $\Omega$ <br/>
-2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$. </br>
+2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$. <br/>
 
 For instance if the first category, we consider CellOracle[4] and NetREX-CF[5]. Their loss function can be represented in a unified framework;
 $$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,P)}]$$
@@ -57,11 +61,11 @@ Thus, we get optimal $\Theta$ by solving $$\hat{\Theta}=argmin_\Theta[{\mathcal{
 Let $P^{(k)} \in \mathbb{R}^{q\times p}|_{k=1}^K$ be the prior, quantified knowledge of regulatory pair existence from $K$ sources(it can be diverse modalities).
 The NetREX-CF model is based on NCA(network component analysis), which loss function can be described as:
 $$\mathcal{L}_{data}=[||X-\Theta A||_2^2+\kappa||A||_2^2+\lambda||\Theta||_2^2+\eta||\Theta||]$$
-For prior regularization perspective, the model jointly achieves prior regularization with the optimization of collaborative filtering(CF) objective by explicitly introducing a penalty matrix $C$:
+For prior regularization perspective, the model jointly achieves prior regularization with the optimization of collaborative filtering(CF) objective by explicitly introducing a penalty matrix of CF $C=1+a•\sum_k P^{(k)}$ and prior mask $B=\mathbb{1}(\sum_kP^{(k)}>0)$. With respect to $\Theta$, these matrices are refined to $\Omega=\alpha_1C|\Theta|\odot B+\alpha_2|\Theta|\odot(1-B)+C$ and $M=|\Theta|+(1-|\Theta|)\odot B$.
+Then prior regularization term is designed to optimize regulator latent matrix $U$ and gene latent matrix $V$, where loss function is:
+$$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{i,j}(M_{i,j}-u_i^Tv_j)^2$$
 
 ---
-
-<br/>
 For the second category, here we consider probabilistic graphical model Symphony[4] and PMF-GRN[5] as an instance.
 Under a bayesian perspective, given observation $X$ and prior $P$, Variational approach is used to approximate the distribution of latent GRN $\Theta$, thus enables estimation of statistics on the posterior distribution of $\Theta$. 
 
