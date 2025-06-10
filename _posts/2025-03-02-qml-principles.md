@@ -66,7 +66,7 @@ Then prior regularization term is designed to optimize regulator latent matrix $
 $$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{i,j}(M_{i,j}-u_i^Tv_j)^2$$
 
 ---
-For the second category, here we consider probabilistic graphical model Symphony[4] and PMF-GRN[5] as an instance.
+For the second category, here we consider probabilistic graphical model Symphony[6] and PMF-GRN[7] as an instance.
 Under a bayesian perspective, given observation $X$ and prior $P$, Variational approach is used to approximate the distribution of latent GRN $\Theta$, thus enables estimation of statistics on the posterior distribution of $\Theta$. 
 
 We can consider two types of external knowledge to provide soft and hard constraints; data itself($Y$, e.g. ATAC-seq) can be jointly incorporated to the generative process(soft), or existing knowledge(e.g. available TF-gene pairs) can be used as a parameter of prior distribution to guide the inference.
@@ -83,7 +83,20 @@ Two different algorithms, harmony and PMF-GRN differs in the data generative pro
 
 ---
 
-### The next step
+### Looking ahead
 We can consider a naive approach; regarding diverse types of prior information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge.
-Some might help, while some might not. Another aspect is, how we could set up with a ground truth data via experiment. Currently, some methods are utilizing TF-gene interaction as a prior knowledge while some consider it for method evaluation.
-How could we tackle such issues for fair benchmark? geneRNIB[8] shows a step forward and could be a solid foundation for improving GRN inference benchmark studies.
+Some might help, while some might not. <br/>
+Another aspect is, how we could set up with a ground truth data via experiment. Currently, some methods are utilizing TF-gene interaction as a prior knowledge while some consider it for method evaluation.
+How could we tackle such issues for fair benchmark? geneRNIB[8] shows a step forward and hopefully could be a solid foundation for improving GRN inference benchmark studies.
+
+---
+
+### References
+[1] Aguirre, M., Spence, J. P., Sella, G., & Pritchard, J. K. (2024). Gene regulatory network structure informs the distribution of perturbation effects. bioRxiv.
+[2] Ahlmann-Eltze, C., Huber, W., & Anders, S. (2024). Deep learning-based predictions of gene perturbation effects do not yet outperform simple linear methods. biorxiv.
+[3] Stock, M., Losert, C., Zambon, M., Popp, N., Lubatti, G., Hörmanseder, E., ... & Scialdone, A. (2025). Leveraging prior knowledge to infer gene regulatory networks from single-cell RNA-sequencing data. Molecular Systems Biology, 1-17.
+[4] Kamimoto, K., Stringa, B., Hoffmann, C. M., Jindal, K., Solnica-Krezel, L., & Morris, S. A. (2023). Dissecting cell identity via network inference and in silico gene perturbation. Nature, 614(7949), 742-751.
+[5] Wang, Y., Lee, H., Fear, J. M., Berger, I., Oliver, B., & Przytycka, T. M. (2022). NetREX-CF integrates incomplete transcription factor data with gene expression to reconstruct gene regulatory networks. Communications Biology, 5(1), 1282.
+[6] Burdziak, C., Azizi, E., Prabhakaran, S., & Pe'er, D. (2019). A nonparametric multi-view model for estimating cell type-specific gene regulatory networks. arXiv preprint arXiv:1902.08138.
+[7] Skok Gibbs, C., Mahmood, O., Bonneau, R., & Cho, K. (2024). PMF-GRN: a variational inference approach to single-cell gene regulatory network inference using probabilistic matrix factorization. Genome biology, 25(1), 88.
+[8] Nourisa, J., Passemiers, A., Stock, M., Zeller-Plumhoff, B., Cannoodt, R., Arnold, C., ... & Luecken, M. D. (2025). geneRNIB: a living benchmark for gene regulatory network inference. bioRxiv, 2025-02.
