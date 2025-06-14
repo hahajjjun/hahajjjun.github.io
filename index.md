@@ -11,7 +11,9 @@ layout: page
 Undergraduate student @ Yonsei University, College of Medicine.
 
 - Study **generative processes** of biological measurements obtained from high-throughput methods. 
-- Both interested in **top-down & bottom-up** approaches, seeking opportunity of quantum (& inspired) algorithms.
+- Both interested in **top-down & bottom-up** approaches with mechanistic insights.
+
+<img src='assets/Main.jpg'></img>
 
 ## Personal experiences
 - [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) at Turkey, Silver medal `Jun 2020`
