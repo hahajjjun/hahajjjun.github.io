@@ -16,7 +16,7 @@ Gene regulatory networks (GRNs) offer a blueprint of these intricate molecular c
 With the advent of multiplexed, high-throughout, and multi-modal measurements, new computational models now seek to infer GRNs with unprecedented granularity.
 
 Unfortunately, the field of GRN inference is fragmented. Each method— based on regression, probabilistic graphical models, or graph neural networks—proposes its own formulation. 
-As researchers, we often face the dilemma of choosing between methods, without a clear framework for understanding their shared foundations. As end users, we also need a holistic benchmark stratified by the types of external information to aid GRN inference; since some external modality could be critically powerful in GRN inference.
+As researchers, we often face the dilemma of choosing between methods, without a clear framework for understanding their shared foundations. As end users, we also need a holistic benchmark stratified by the types of external information giving aid to GRN inference; since some external modality could be critically powerful in GRN inference.
 
 Inspired by the excellent review on GRN inference methods[1], I'd like to share one perspective on understanding diverse GRN inference methods with external information under a unified theoretical framework. 
 
@@ -44,7 +44,7 @@ For gene $j$, let $S_j$ be the set of candidate regulators. For gene $i$ and $j$
 Consider a regression model
 $$X_j=\sum_{i\neq j}\Theta_{ij}X_i+\epsilon_j, \text{ where } \epsilon_j \sim N(0,\sigma_j^2)$$
 Then optimization objective for LASSO regression is
-$$\mathcal{L_{data}} = \sum_{j=1}^p[{1\over 2\sigma_j^2}||X_j-\sum_{i=1}^p \Omega_{ij}\Theta_{ij}X_i||_2^2+\kappa \sum_{i=1}^p\Omega_{ij}|Theta_{ij}|]$$
+$$\mathcal{L_{data}} = \sum_{j=1}^p[{1\over 2\sigma_j^2}||X_j-\sum_{i=1}^p \Omega_{ij}\Theta_{ij}X_i||_2^2+\kappa \sum_{i=1}^p\Omega_{ij}|\Theta_{ij}|]$$
 , and with prior regularization, 
 Additionally, hard constraint on unavailable regulatory pairs on $\Theta$ yields
 $$\mathcal{L}_{reg}=0\text{ if } \Theta_{ij}=0 \text{ for all } i,j \text{ with } m_{ij}=0, \text{ otherwise } \infty$$
@@ -60,7 +60,7 @@ The NetREX-CF model is based on NCA(network component analysis), which loss func
 $$\mathcal{L}_{data}=[||X-\Theta A||_2^2+\kappa||A||_2^2+\lambda||\Theta||_2^2+\eta||\Theta||]$$
 For prior regularization perspective, the model jointly achieves prior regularization with the optimization of collaborative filtering(CF) objective by explicitly introducing a penalty matrix of CF $C=1+a•\sum_k P^{(k)}$ and prior mask $B=\mathbb{1}(\sum_kP^{(k)}>0)$. With respect to $\Theta$, these matrices are refined to $\Omega=\alpha_1C|\Theta|\odot B+\alpha_2|\Theta|\odot(1-B)+C$ and $M=|\Theta|+(1-|\Theta|)\odot B$.
 Then prior regularization term is designed to optimize regulator latent matrix $U$ and gene latent matrix $V$, where loss function is:
-$$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{i,j}(M_{i,j}-u_i^Tv_j)^2$$
+$$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{ij}(M_{ij}-u_i^Tv_j)^2$$
 
 For the second category, here we consider probabilistic graphical model Symphony[4] and PMF-GRN[5] as an instance.
 Under a bayesian perspective, given observation $X$ and prior $P$, Variational approach is used to approximate the distribution of latent GRN $\Theta$, thus enables estimation of statistics on the posterior distribution of $\Theta$. 
