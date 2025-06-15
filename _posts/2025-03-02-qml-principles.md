@@ -86,7 +86,7 @@ Naturally, this raises the question of when we perform GRN inference based on sc
 
 To answer this question, we can consider a naive benchmark experiment; regarding diverse types of external information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge. <br/>
 However, we stil lack a rich knowledge about how we could set up with a ground truth data in a experimental or simulational study. Preparing a ground truth network by utilizing TF-gene interaction are one approach under current understanding, and CRISPR screen paired with rich phenotypic measurements could emerge as a novel, information-rich modality.
-Emergence of these data naturally leads to the question about the choice of dataset usage; they can be both incorporated as a prior knowledge or as a ground truth for evaluation. Sharpening this fuzzy relationships are thus important in systematic benchmark studies, and this is one of the reason why I especially appreciate geneRNIB[8] as a solid foundation for improving GRN inference benchmark studies.<br/>
+Emergence of these data naturally leads to the question about the choice of dataset usage; they can be both incorporated as a prior knowledge or as a ground truth for evaluation. Sharpening this fuzzy relationship is thus important in systematic benchmark studies, and this is one of the reason why I especially appreciate geneRNIB[8] as a solid foundation for improving GRN inference benchmark studies.<br/>
 
 ### References
 ---
