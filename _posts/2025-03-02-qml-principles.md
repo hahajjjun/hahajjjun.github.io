@@ -29,13 +29,13 @@ Coarsely we can consider two categories of GRN inference algorithms; <br/>
 1) directly inferring $\Theta$ from given scRNA-seq data $X$ with regularization term to incorporate external knowledge $\Omega$ <br/>
 2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$. <br/>
 
-For instance if the first category, we consider CellOracle[4] and NetREX-CF[5]. Their loss function can be represented in a unified framework;
+For instance if the first category, we consider CellOracle[2] and NetREX-CF[3]. Their loss function can be represented in a unified framework;
 $$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,\Omega)}]$$
 
 The first term stands for the data fit loss, and the remainder stands for the regularization term with respect to the prior information $P$.
 
 **Proposition 1.** CellOracle regression model is an instance of unified framework.
----
+<br/>
 *proof sketch.*
 CellOracle regression model is based on LASSO regression, and candidate regulators are limited to the pre-defined set informed by the prior knowledge.
 
@@ -53,7 +53,7 @@ Thus, we get optimal $\Theta$ by solving $$\hat{\Theta}=argmin_\Theta[{\mathcal{
 
 
 **Proposition 2.** NetREX-CF regression model is an instance of unified framework.
----
+<br/>
 *proof sketch.*
 Let $P^{(k)} \in \mathbb{R}^{q\times p}|_{k=1}^K$ be the prior, quantified knowledge of regulatory pair existence from $K$ sources(it can be diverse modalities).
 The NetREX-CF model is based on NCA(network component analysis), which loss function can be described as:
@@ -62,7 +62,6 @@ For prior regularization perspective, the model jointly achieves prior regulariz
 Then prior regularization term is designed to optimize regulator latent matrix $U$ and gene latent matrix $V$, where loss function is:
 $$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{i,j}(M_{i,j}-u_i^Tv_j)^2$$
 
----
 For the second category, here we consider probabilistic graphical model Symphony[4] and PMF-GRN[5] as an instance.
 Under a bayesian perspective, given observation $X$ and prior $P$, Variational approach is used to approximate the distribution of latent GRN $\Theta$, thus enables estimation of statistics on the posterior distribution of $\Theta$. 
 
@@ -78,25 +77,24 @@ Here, we can apply known regulatory relationship to design prior $p(P)$, for ins
 
 Two different algorithms, symphony and PMF-GRN differs in the data generative process and the choice of strategy for external knowledge injection but they both employ variational inference to optimize the objective function.
 
----
 
 ### Looking ahead
-Recently, several sporadic reports provide a clue about the shape of underlying topology of GRN; we can make theoretical hypotheses about the relationship between the amount of information about GRN which can be extracted from diverse modalities of observation. Which provides a more granular view of GRN? Gene expression patterns, mainly co-expression, from scRNA-seq data? Or the counterparts obtained from causal studies such as perturb-seq? Is there any underlying inequality that holds for the information from two types of observation?
-What is currently understood; when gene expression was simulated via a stochastic process from GRNs, the amount of information from direct causal studies seemed to provide a higher resolution view of the underlying network structure than co-expression[7]. Additionally, another report show scRNA-seq atlas scale learning is sufficient to effectively extrapolate on genetic perturbation effects; especially using scGPT and GEARS embeddings[8]. These findings therefore suggest the feasibility of **pushing the limit** **approach** of analytical methods to infer GRN from scRNA-seq co-expression information.
-Naturally, this raises the question of when we perform GRN inference based on scRNA-seq co-expression, whether perturb-seq can effectively aid inference(*very limited at this point, since genome-wide CRISPR KO single cell screens are known for one cell type*) compared to another type of priors(e.g. ATAC-seq or knowledge based databases) and whether it can be used as a universal prior despite limitations in cell type differences.
-
-To answer this question, we can consider a naive benchmark experiment; regarding diverse types of external information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge.
-However, we stil lack a rich knowledge about how we could set up with a ground truth data in a experimental or simulational study. Preparing a ground truth network by utilizing TF-gene interaction are one approach under current understanding, and CRISPR screen paired with rich phenotypic measurements could emerge as a novel, information-rich modality.
-One remaining question is the choice of dataset usage;  they can be both incorporated as a prior knowledge or as a ground truth for evaluation. Sharpening this fuzzy relationships are thus important in systematic benchmark studies, and this is one of the reason why I especially appreciate geneRNIB[8] as a solid foundation for improving GRN inference benchmark studies.
-
 ---
+Recently, several sporadic reports provide a clue about the shape of underlying topology of GRN; we can make theoretical hypotheses about the relationship between the amount of information about GRN which can be extracted from diverse modalities of observation. Which provides a more granular view of GRN? Gene expression patterns, mainly co-expression, from scRNA-seq data? Or the counterparts obtained from causal studies such as perturb-seq? Is there any underlying inequality that holds for the information from two types of observation? <br/>
+What is currently understood; when gene expression was simulated via a stochastic process from GRNs, the amount of information from direct causal studies seemed to provide a higher resolution view of the underlying network structure than co-expression[6]. Additionally, another report show scRNA-seq atlas scale learning is sufficient to effectively extrapolate on genetic perturbation effects; especially using scGPT and GEARS embeddings[7]. These findings therefore suggest the feasibility of **pushing the limit** **approach** of analytical methods to infer GRN from scRNA-seq co-expression information. <br/>
+Naturally, this raises the question of when we perform GRN inference based on scRNA-seq co-expression, whether perturb-seq can effectively aid inference(*very limited at this point, since genome-wide CRISPR KO single cell screens are known for one cell type*) compared to another type of priors(e.g. ATAC-seq or knowledge based databases) and whether it can be used as a universal prior despite limitations in cell type differences.<br/>
+
+To answer this question, we can consider a naive benchmark experiment; regarding diverse types of external information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge. <br/>
+However, we stil lack a rich knowledge about how we could set up with a ground truth data in a experimental or simulational study. Preparing a ground truth network by utilizing TF-gene interaction are one approach under current understanding, and CRISPR screen paired with rich phenotypic measurements could emerge as a novel, information-rich modality.
+Emergence of these data naturally leads to the question about the choice of dataset usage; they can be both incorporated as a prior knowledge or as a ground truth for evaluation. Sharpening this fuzzy relationships are thus important in systematic benchmark studies, and this is one of the reason why I especially appreciate geneRNIB[8] as a solid foundation for improving GRN inference benchmark studies.<br/>
 
 ### References
+---
 [1] Stock, M., Losert, C., Zambon, M., Popp, N., Lubatti, G., Hörmanseder, E., ... & Scialdone, A. (2025). Leveraging prior knowledge to infer gene regulatory networks from single-cell RNA-sequencing data. Molecular Systems Biology, 1-17. <br/>
 [2] Kamimoto, K., Stringa, B., Hoffmann, C. M., Jindal, K., Solnica-Krezel, L., & Morris, S. A. (2023). Dissecting cell identity via network inference and in silico gene perturbation. Nature, 614(7949), 742-751. <br/>
 [3] Wang, Y., Lee, H., Fear, J. M., Berger, I., Oliver, B., & Przytycka, T. M. (2022). NetREX-CF integrates incomplete transcription factor data with gene expression to reconstruct gene regulatory networks. Communications Biology, 5(1), 1282. <br/>
 [4] Burdziak, C., Azizi, E., Prabhakaran, S., & Pe'er, D. (2019). A nonparametric multi-view model for estimating cell type-specific gene regulatory networks. arXiv preprint arXiv:1902.08138. <br/>
 [5] Skok Gibbs, C., Mahmood, O., Bonneau, R., & Cho, K. (2024). PMF-GRN: a variational inference approach to single-cell gene regulatory network inference using probabilistic matrix factorization. Genome biology, 25(1), 88. <br/>
-[6] Nourisa, J., Passemiers, A., Stock, M., Zeller-Plumhoff, B., Cannoodt, R., Arnold, C., ... & Luecken, M. D. (2025). geneRNIB: a living benchmark for gene regulatory network inference. bioRxiv, 2025-02. <br/>
-[7] Aguirre, M., Spence, J. P., Sella, G., & Pritchard, J. K. (2024). Gene regulatory network structure informs the distribution of perturbation effects. bioRxiv. <br/>
-[8] Ahlmann-Eltze, C., Huber, W., & Anders, S. (2024). Deep learning-based predictions of gene perturbation effects do not yet outperform simple linear methods. biorxiv. <br/>
+[6] Aguirre, M., Spence, J. P., Sella, G., & Pritchard, J. K. (2024). Gene regulatory network structure informs the distribution of perturbation effects. bioRxiv. <br/>
+[7] Ahlmann-Eltze, C., Huber, W., & Anders, S. (2024). Deep learning-based predictions of gene perturbation effects do not yet outperform simple linear methods. biorxiv. <br/>
+[8] Nourisa, J., Passemiers, A., Stock, M., Zeller-Plumhoff, B., Cannoodt, R., Arnold, C., ... & Luecken, M. D. (2025). geneRNIB: a living benchmark for gene regulatory network inference. bioRxiv, 2025-02. <br/>
