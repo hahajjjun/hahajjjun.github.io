@@ -29,10 +29,10 @@ Coarsely we can consider two categories of GRN inference algorithms; <br/>
 1) directly inferring $\Theta$ from given scRNA-seq data $X$ with regularization term to incorporate external knowledge $\Omega$ <br/>
 2) understanding $\Theta$ as a part of generative process that supports the realization of scRNA-seq data $X$ and apply soft or hard constraints with external data $Y$. <br/>
 
-For instance if the first category, we consider CellOracle[2] and NetREX-CF[3]. Their loss function can be represented in a unified framework;
+For instance of the first category, we consider CellOracle[2] and NetREX-CF[3]. Their loss function can be represented in a unified framework;
 $$\hat{\Theta}=argmin_\Theta[{\mathcal{L}_{data}(X,\Theta)+\mathcal{L}_{reg}(\Theta,\Omega)}]$$
 
-The first term stands for the data fit loss, and the remainder stands for the regularization term with respect to the prior information $P$.
+The first term stands for the data fit loss, and the remainder stands for the regularization term with respect to the prior information $\Omega$.
 
 **Proposition 1.** CellOracle regression model is an instance of unified framework.
 <br/>
@@ -61,6 +61,8 @@ $$\mathcal{L}_{data}=[||X-\Theta A||_2^2+\kappa||A||_2^2+\lambda||\Theta||_2^2+\
 For prior regularization perspective, the model jointly achieves prior regularization with the optimization of collaborative filtering(CF) objective by explicitly introducing a penalty matrix of CF $C=1+a•\sum_k P^{(k)}$ and prior mask $B=\mathbb{1}(\sum_kP^{(k)}>0)$. With respect to $\Theta$, these matrices are refined to $\Omega=\alpha_1C|\Theta|\odot B+\alpha_2|\Theta|\odot(1-B)+C$ and $M=|\Theta|+(1-|\Theta|)\odot B$.
 Then prior regularization term is designed to optimize regulator latent matrix $U$ and gene latent matrix $V$, where loss function is:
 $$\mathcal{L}_{reg}=\sum_{i,j}\Omega_{ij}(M_{ij}-u_i^Tv_j)^2$$
+
+---
 
 For the second category, here we consider probabilistic graphical model Symphony[4] and PMF-GRN[5] as an instance.
 Under a bayesian perspective, given observation $X$ and prior $P$, Variational approach is used to approximate the distribution of latent GRN $\Theta$, thus enables estimation of statistics on the posterior distribution of $\Theta$. 
