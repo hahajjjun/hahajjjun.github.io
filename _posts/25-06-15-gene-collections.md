@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Identifiability of latent structure"
+title: "Collection of genes"
 subtitle: ""
 excerpt_separator: "<!--more-->"
 date:	2025-06-15
@@ -11,4 +11,4 @@ categories: ["Annotated BI"]
 
 ### Motivation
 ---
-cNMF, case-control, hotspot
+gene module, case-control, functional genomics
