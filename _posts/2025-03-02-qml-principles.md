@@ -93,8 +93,8 @@ These findings therefore suggest the feasibility of **pushing the limit** **appr
 Naturally, this raises the question of when we perform GRN inference based on scRNA-seq co-expression, whether perturb-seq can effectively aid inference(*very limited at this point, since genome-wide CRISPR KO single cell screens are known for one cell type*) compared to another type of priors(e.g. ATAC-seq or knowledge based databases) and whether it can be used as a universal prior despite limitations in cell type differences.<br/>
 To answer this question, we can consider a naive benchmark experiment; regarding diverse types of external information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge.
 
-However, we still lack a rich knowledge about how we could set up with a ground truth data in a experimental or simulational study. 
-Preparing a ground truth network by utilizing TF-gene interaction are one approach under current understanding, and CRISPR screen paired with rich phenotypic measurements could emerge as a novel, information-rich modality.
+However, we still lack a rich knowledge about how we could set up with a ground truth data in an experimental or simulational study. 
+Preparing a ground truth network by utilizing TF-gene interaction is one approach under current understanding, and CRISPR screen paired with rich phenotypic measurements could emerge as a novel, information-rich modality.
 Emergence of these data naturally leads to the question about the choice of dataset usage; they can be both incorporated as a prior knowledge or as a ground truth for evaluation. Sharpening this fuzzy relationship is thus important in systematic benchmark studies, and this is one of the reason why I especially appreciate geneRNIB[8] as a solid foundation for improving GRN inference benchmark studies.<br/>
 
 ### References
