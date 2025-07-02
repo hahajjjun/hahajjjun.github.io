@@ -3,7 +3,7 @@ layout: post
 title:  "Unified perspective on GRN inference with external knowledge"
 subtitle: ""
 excerpt_separator: "<!--more-->"
-date:	2025-06-07
+date:	2025-03-07
 comments: true
 categories: ["Annotated BI"]
 ---

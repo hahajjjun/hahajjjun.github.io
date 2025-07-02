@@ -3,7 +3,7 @@ layout: post
 title: "Collection of genes"
 subtitle: ""
 excerpt_separator: "<!--more-->"
-date:	2025-06-15
+date:	2025-07-02
 comments: true
 categories: ["Annotated BI"]
 ---
