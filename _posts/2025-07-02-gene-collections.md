@@ -26,4 +26,11 @@ Historically, landscape view on the pairwise relationships across gene functions
 
 ### Modern quantitative studies on pairwise gene relationships
 ---
-Recently, with the advancement of genome-wide CRISPR perturbation paired with single cell measurements, modern analogous approaches are getting attention. 
+Intersetingly, we can understand several important results revealed from genome-wide CRISPR perturbation paired with single cell measurements, through the lens of conventional studies about gene co-expression, co-regulation, and co-function. First of all, here we demonstrate the key results identified from important benchmark studies on perturbation response prediction.
+
+1. scGPT embedding linearly extrapolates perturbation response
+2. knowledge base embedding informs perturbation response
+3. diverse biological prior knowledge on pairwise relationship could be used to predict perturbation response: while orthogonal scCRISPR screen highly benefits prediction.
+
+### Looking ahead
+---
