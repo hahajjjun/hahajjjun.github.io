@@ -12,7 +12,7 @@ M.D. Candidate @ Yonsei University, College of Medicine.
 
 Studying **generative processes** of high-througput biological measurements in immune cells.
   
-<img src='assets/Principle.jpg'/>
+<img src='assets/Principle.png'/>
 
 ## Publications
 1. **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
