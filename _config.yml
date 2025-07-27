@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Junha Park
 tagline:          'A Jekyll theme'
-description:      '🧬,🖥️,⚛️'
+description:      ''
 url:              https://hahajjjun.github.io
 baseurl:          '/'
                   # the optional subpath of your site, e.g. "/blog"
