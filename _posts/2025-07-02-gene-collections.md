@@ -39,7 +39,7 @@ $$P=\sum_{i=1}^N w_ix_i$$
 where $x_i$ is the expression of gene $i$ and $w_i$ is the corresponding weight. Definition of gene module is roughly categorized into three types: 
 1. $M_{cell}$(cell-type specific): $$M_{cell}=\sum w_ix_i \text{ where } w_i=\sigma(\chi_i) \text{ for } \chi_i=-2log(P_i)~\chi_2^2$$. Here, $P_i$ is a p-value after DE test comparing specific cell type $C$ to all others, and $\sigma(\cdot)$ is a min-max scaling function.
   
-2. $M_{dis}$(disease dependent): Defined similarly to $M_cell$, but the p-values are derivd from disease vs. healthy comparisons.
+2. $M_{dis}$(disease dependent): Defined similarly to $M_{cell}$, but the p-values are derivd from disease vs. healthy comparisons.
 
 3. $M_{proc}$(cellular process): Obatined using contrastive NMF, which lears shared and condition-specific components from healthy and diseased scRNA-seq data.
 
