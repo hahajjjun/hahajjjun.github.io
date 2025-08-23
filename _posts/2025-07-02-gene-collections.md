@@ -56,9 +56,9 @@ $$H_{P\times N_1}\approx [L^{CH}L^{UH}]F^H, D_{P\times N_2}\approx [L^{CD}L^{UD}
 
 ,where $L^H=[L^{CH} L^{UH}], L^D=[L^{CD}L^{UD}]$ contain **shared**($L^{CH}, L^{CD}$) component and **unique** components ($$L^{UH}, L^{UD}$$).
 
-In the **contrastive setting**, we enforce similarity between shared components by introducing a penalty term $||L^{CH}-L^{CD}||$. This term is added to conventional NMF obejctive thus it leads to the minimzation of objective $Q$:
+In the **contrastive setting**, we enforce similarity between shared components by introducing a penalty term $\Vert L^{CH}-L^{CD}\Vert $. This term is added to conventional NMF obejctive thus it leads to the minimzation of objective $Q$:
 
-$$Q=\frac{1}{2} ||H-L^HF^H||_F^2+\frac{1}{2} ||D-L^DF^D||_F^2+\frac{\mu}{2}(||L^H||_F^2+||L^D||_F^2)+\frac{\gamma}{2}(||L^{CH}-L^{CD}||_F^2)$$
+$$Q=\frac{1}{2} \Vert{H-L^HF^H}\Vert _F^2+\frac{1}{2}\Vert{D-L^DF^D}\Vert _F^2+\frac{\mu}{2}(\Vert{L^H} \Vert _F^2+\Vert{L^D}\Vert _F^2)+\frac{\gamma}{2}(\Vert{L^{CH}-L^{CD}}\Vert _F^2)$$
 
 Compuptation of gradient $\nabla Q(L^H), \nabla Q(L^D), \nabla Q(F^H), \nabla Q(F^D)$ yields a multiplicative update rule, derived from splitting the gradient into positive and negative components[4]:
 
