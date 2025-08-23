@@ -39,12 +39,12 @@ $$P=\sum_{i=1}^N w_ix_i$$
 where $x_i$ is the expression of gene $i$ and $w_i$ is the corresponding weight. Definition of gene module is roughly categorized into three types: 
 1. $M_{cell}$(cell-type specific): $$M_{cell}=\sum w_ix_i \text{ where } w_i=\sigma(\chi_i) \text{ for } \chi_i=-2log(P_i)~\chi_2^2$$. Here, $P_i$ is a p-value after DE test comparing specific cell type $C$ to all others, and $\sigma(\cdot)$ is a min-max scaling function.
   
-2. $M_{dis}$(disease dependent): Defined similarly to $M_{cell}$, but the p-values are derivd from disease vs. healthy comparisons.
+2. $M_{dis}$(disease dependent): Defined similarly to $M_{cell}$, but the p-values are derived from disease vs. healthy comparisons.
 
-3. $M_{proc}$(cellular process): Obatined using contrastive NMF, which lears shared and condition-specific components from healthy and diseased scRNA-seq data.
+3. $M_{proc}$(cellular process): Obatined using contrastive NMF, which learns shared and condition-specific components from healthy and diseased scRNA-seq data.
 
 ---
-**Contrastive NMF for Module identification**:
+**Contrastive(case-control) NMF for Module identification**:
 
 Given two scRNA-seq feature matrices:
 - $H_{P\times N_1}$ for healthy samples
@@ -68,11 +68,12 @@ This encourages shared components to capture common structure while allowing dis
 
 ---
 **Linking Gene Modules to GWAS via s-LDSC**
+
 Once modules are defined, `sc-linker` treats each module as a functional category and uses **stratified LDSC** (s-LDSC)[5] to quantify its contribution to trait heritability.
 
 It is a long journey to introduce **s-LDSC** from scratch, but some key concepts include:
 - regressing GWAS summary statistics(chi-square statistic) with LD score(sum of LD $r^2$ values between that SNP and all others in the region) yields a estimate of hearitability and confounding factors such as population structure.
-- s-LDSC extends LDSC into the functional category of SNPs
+- s-LDSC extends LDSC accounting for the functional category of SNPs
 - in `sc-linker` study, genes comprising the module are mapped to SNPs via enhancer-gene mapping(Roadmap-ABC)[6-10] strategy thus translates gene functional categories to a collection of mapped SNPs.
 
 These consecutive steps in identifying gene programs and linking with GWAS summary statistics, provide a **foundational framework** in **identifying and applying a collection of genes to interpret complex, context-dependent hierarchy across variant-enhancer-gene-trait**.
