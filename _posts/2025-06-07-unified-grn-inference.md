@@ -90,7 +90,7 @@ What is currently understood; when gene expression was simulated via a stochasti
 Additionally, another report show scRNA-seq atlas scale learning is sufficient to effectively extrapolate on genetic perturbation effects; especially using scGPT and GEARS embeddings[7]. 
 These findings therefore suggest the feasibility of **pushing the limit** **approach** of analytical methods to infer GRN from scRNA-seq co-expression information.
 
-Naturally, this raises the question of when we perform GRN inference based on scRNA-seq co-expression, whether perturb-seq can effectively aid inference(*very limited at this point, since genome-wide CRISPR KO single cell screens are known for one cell type*) compared to another type of priors(e.g. ATAC-seq or knowledge based databases) and whether it can be used as a universal prior despite limitations in cell type differences.<br/>
+Naturally, this raises the question of when we perform GRN inference based on scRNA-seq co-expression, whether perturb-seq can effectively aid inference(*very limited at this point, since genome-wide CRISPRi single cell screens are known for one cell type*) compared to another type of priors(e.g. ATAC-seq or knowledge based databases) and whether it can be used as a universal prior despite limitations in cell type differences.<br/>
 To answer this question, we can consider a naive benchmark experiment; regarding diverse types of external information under unified objective function, and systematically assess the information gain obtained from diverse types of prior knowledge.
 
 However, we still lack a rich knowledge about how we could set up with a ground truth data in an experimental or simulational study. 
