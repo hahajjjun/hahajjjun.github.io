@@ -1,13 +1,26 @@
-<script type="text/x-mathjax-config"> 
-	MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all"  }  }  }); 
+<script>
+window.MathJax = {
+  tex: {
+    tags: "all"
+  }
+};
 </script>
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-		tex2jax: {
-			inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-			processEscapes: true
-		}
-					           
-	});
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true
+  }
+		output: {
+    displayOverflow: 'linebreak',  // break long lines
+    linebreaks: {                  // options for when overflow is linebreak
+      inline: true,                   // true for browser-based breaking of in-line equations
+      width: '100%',                  // a fixed size or a percentage of the container width
+      lineleading: .2,                // the default lineleading in em units
+      LinebreakVisitor: null,         // The LinebreakVisitor to use
+    }
+  }
+};
 </script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js"></script>
