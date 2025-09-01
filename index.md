@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on February, 2025</span>
+<span style="color:grey">Updated on September, 2025</span>
 
 ## About
 
