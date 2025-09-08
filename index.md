@@ -10,12 +10,12 @@ layout: page
 
 M.D. Candidate @ Yonsei University, College of Medicine.
 
-Studying **generative processes** of high-througput biological measurements.
+Studying **generative processes** of high-throughput biological measurements.
 
 <img src='./assets/figure.jpg'>
 
 ## Publications
-1. **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
 
 ## Personal experiences
 - [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) at Turkey, Silver medal `Jun 2020`
