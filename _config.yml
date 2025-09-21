@@ -33,8 +33,6 @@ sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
-sidebar_resource_link: '/resource'
-
 # Disqus
 disqus:
   shortname: junhapage
