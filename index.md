@@ -23,3 +23,12 @@ Studying **generative processes** of high-throughput biological measurements.
 - Internship at [Korea Quantum Computing Co.](https://www.kqchub.com/), Busan, Republic of Korea `Jun 2022 ~ Aug 2022`
 - Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
 - Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Jan 2025`
+
+---
+
+## Posts
+
+> Computational Biology
+- [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
+- [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
+- [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
