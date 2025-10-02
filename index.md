@@ -28,7 +28,7 @@ Studying **generative processes** of high-throughput biological measurements.
 
 ## Posts
 
-> Computational Biology
+Computational Biology
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
 - [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
