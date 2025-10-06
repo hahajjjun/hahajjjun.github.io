@@ -15,10 +15,10 @@ Studying **generative processes** of high-throughput biological measurements.
 <img src='./assets/figure.jpg'>
 
 ## Publications
-- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024, Molecules and Cells) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
 
 ## Personal experiences
-- [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) at Turkey, Silver medal `Jun 2020`
+- Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/), Istanbul, Turkey `Jun 2020`
 - Internship at [TGILAB](https://www.tgilab.org/), Yonsei University, Seoul, Republic of Korea `Jun 2021 ~ Aug 2021` `Dec 2021 ~ Feb 2022`
 - Internship at [Korea Quantum Computing Co.](https://www.kqchub.com/), Busan, Republic of Korea `Jun 2022 ~ Aug 2022`
 - Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
@@ -28,7 +28,10 @@ Studying **generative processes** of high-throughput biological measurements.
 
 ## Posts
 
-Computational Biology
+**Computational** Biology
+- [Coalescing causal inference and foundation models](https://hahajjjun.github.io/annotated%20bi/2025/09/21/causal-fm.html)
+
+Computational **Biology**
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
 - [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
