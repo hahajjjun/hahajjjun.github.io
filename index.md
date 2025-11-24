@@ -35,3 +35,4 @@ Computational **Biology**
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
 - [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
+- [Nature's Language Processing](https://hahajjjun.github.io/annotated%20bi/2025/11/22/nlp.html)
