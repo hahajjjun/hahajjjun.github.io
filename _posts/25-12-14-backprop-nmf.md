@@ -40,7 +40,7 @@ Previous blog post have explained the multiplicative update rule for NMF, which 
 
 $$(U,W)=\arg\min_{U\geq0,W\geq0}||A-UW^T||_F^2$$
 
-This problem is not convex w.r.t. the input pair $(U,W)$, but when we fix the value of one of the two factors and optimizing the other makes the NMF problem into a pair of convex NNLS problems. We call it an alternating NNLS problems, and its convexity ensures that alternating minimization eventually leads to a local minimum. Here, we first discuss the technical details in solving NMF optimization problem with alternating direction method of multipliers(ADMM).
+This problem is not convex w.r.t. the input pair $(U,W)$, but fixing the value of one of the two factors and optimizing the other—makes the NMF problem into a pair of convex NNLS problems. We call it an alternating NNLS problems, and its convexity ensures that alternating minimization eventually leads to a local minimum. Here, we first discuss the technical details in solving NMF optimization problem with alternating direction method of multipliers(ADMM).
 
 The standard practice of ADMM in integrating nonnegativity constraints to optimization objective is introducing an auxiliary variable $\tilde{U}, \tilde{W}$ as follows:
 
