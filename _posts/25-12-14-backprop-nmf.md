@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Nature's Language Processing"
+title:  "Backpropagation through the NMF block"
 subtitle: ""
 excerpt_separator: "<!--more-->"
 date:	2025-12-14
