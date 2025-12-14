@@ -42,7 +42,7 @@ $$(U,W)=\arg\min_{U\geq0,W\geq0}||A-UW^T||_F^2$$
 
 This problem is not convex w.r.t. the input pair $(U,W)$, but when we fix the value of one of the two factors and optimizing the other makes the NMF problem into a pair of convex NNLS problems. We call it an alternating NNLS problems, and its convexity ensures that alternating minimization eventually leads to a local minimum. Here, we first discuss the technical details in solving NMF optimization problem with alternating direction method of multipliers(ADMM).
 
-The standard practice of ADMM in integrating nonnegativity constraints to optimization objective is introducing an auximilariy variable $\tilde{U}, \tilde{W}$ as follows:
+The standard practice of ADMM in integrating nonnegativity constraints to optimization objective is introducing an auxiliary variable $\tilde{U}, \tilde{W}$ as follows:
 
 $$\min_{U,\tilde{U},W,\tilde{W}}\frac{1}{2}||A-\tilde{U}\tilde{W}^T||^2_F+\delta(U)+\delta(W), \\ s.t. \tilde{U}=U,\tilde{W}=W, \delta{(H)}=0 \text{ if } H\geq 0, +\infty \text{ o.w. }$$
 
