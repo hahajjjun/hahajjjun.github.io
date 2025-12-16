@@ -74,3 +74,25 @@ $$U_{t+1} = \arg\min_{U=\tilde{U}} \frac{1}{2}||A-\tilde{U}W^T_t||^2_F+\delta(U)
 $$W_{t+1} = \arg\min_{W=\tilde{W}} \frac{1}{2}||A-U_t\tilde{W}^T||^2_F+\delta(W)+\frac{\rho}{2}||\tilde{W}-W||_2^2$$
 
 Each problem decomposes into three sub-problems solved by ADMM. Their simplicity and efficiency are detailed in [Fel et al., Appendix C.2](https://arxiv.org/pdf/2211.10154).
+
+---
+
+### Implicit differentiation of NMF block with `jaxopt`
+
+Let's motivate the use of "implicit differentiation" for backpropagating through the NMF block. 
+Our goal is to compute $\frac{\partial{U}}{\partial{X}}, \frac{\partial{W}}{\partial{X}}$. 
+
+The chain rule shows we need to compute the Jacobians $\frac{\partial{U}}{\partial{A}}, \frac{\partial{W}}{\partial{A}}$ and feed them into the automatic differentiation computational graph implemented by PyTorch or TensorFlow. 
+
+The `Jaxopt` library provides an efficient, modular way to perform implicit differentiation. It calculates these Jacobians without explicitly forming the entire Jacobian matrix. Instead, it uses VJP and JVP (vector-Jacobian product and Jacobian-vector product) to reduce the problem to solving a linear system.
+
+General principles are omitted here, but  shows that various families of optimality conditions (including stationary conditions, KKT, etc.) reduce to the general principle by choosing an appropriate optimality function $F$. 
+
+Specifically, backpropagation through the NMF block stacks the KKT conditions on the NNLS problems to obtain optimality function $F$.
+
+For the NMF block, we can perform two-stage backpropagation following these steps:
+
+> (1) Construct optimality function $F=((U,W,\bar{U},\bar{W}),A)=((UW^T-A)W-\bar{U}, (WU^T-A^T)U-\bar{W},\bar{U}\odot U, \bar{W}\odot W)$. <br/>
+> (2) Jaxopt computes $\frac{\partial(U,W,\bar{U},\bar{W})}{\partial A}= -(\partial_1{F})^{-1}\partial_2F$.  <br/>
+> (2') Here, $(\partial_1F)^{-1}$ is not explicitly computed. Instead, $(\partial_1F) \frac{\partial(U,W,\bar{U},\bar{W})}{\partial A}= -\partial_2F$ is solved by conjugate gradient using JVP $v \mapsto(\partial_1F)v$. <br/>
+> (3) Use the chain rule to compute $\frac{\partial U}{\partial X}=\frac{\partial A}{\partial X}\frac{\partial U}{\partial A}$. 
