@@ -92,7 +92,7 @@ Specifically, backpropagation through the NMF block stacks the KKT conditions on
 
 For the NMF block, we can perform two-stage backpropagation following these steps:
 
-> (1) Construct optimality function $F=((U,W,\bar{U},\bar{W}),A)=((UW^T-A)W-\bar{U}, (WU^T-A^T)U-\bar{W},\bar{U}\odot U, \bar{W}\odot W)$. <br/>
+> (1) Construct optimality function $F((U,W,\bar{U},\bar{W}),A)=((UW^T-A)W-\bar{U}, (WU^T-A^T)U-\bar{W},\bar{U}\odot U, \bar{W}\odot W)$. <br/>
 > (2) Jaxopt computes $\frac{\partial(U,W,\bar{U},\bar{W})}{\partial A}= -(\partial_1{F})^{-1}\partial_2F$.  <br/>
 > (2') Here, $(\partial_1F)^{-1}$ is not explicitly computed. Instead, $(\partial_1F) \frac{\partial(U,W,\bar{U},\bar{W})}{\partial A}= -\partial_2F$ is solved by conjugate gradient using JVP $v \mapsto(\partial_1F)v$. <br/>
 > (3) Use the chain rule to compute $\frac{\partial U}{\partial X}=\frac{\partial A}{\partial X}\frac{\partial U}{\partial A}$. 
