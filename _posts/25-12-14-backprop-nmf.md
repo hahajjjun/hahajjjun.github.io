@@ -86,7 +86,7 @@ The chain rule shows we need to compute the Jacobians $\frac{\partial{U}}{\parti
 
 The `Jaxopt` library provides an efficient, modular way to perform implicit differentiation. It calculates these Jacobians without explicitly forming the entire Jacobian matrix. Instead, it uses VJP and JVP (vector-Jacobian product and Jacobian-vector product) to reduce the problem to solving a linear system.
 
-General principles are omitted here, but  shows that various families of optimality conditions (including stationary conditions, KKT, etc.) reduce to the general principle by choosing an appropriate optimality function $F$. 
+General principles are omitted here, but [Blondel et al.](https://arxiv.org/abs/2105.15183) shows that various families of optimality conditions (including stationary conditions, KKT, etc.) reduce to the general principle by choosing an appropriate optimality function $F$. 
 
 Specifically, backpropagation through the NMF block stacks the KKT conditions on the NNLS problems to obtain optimality function $F$.
 
