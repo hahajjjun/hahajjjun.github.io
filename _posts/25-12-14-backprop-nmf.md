@@ -77,7 +77,7 @@ Each problem decomposes into three sub-problems solved by ADMM. Their simplicity
 
 ---
 
-### Implicit differentiation of NMF block with `jaxopt`
+### Implicit differentiation of NMF block with `Jaxopt`
 
 Let's motivate the use of "implicit differentiation" for backpropagating through the NMF block. 
 Our goal is to compute $\frac{\partial{U}}{\partial{X}}, \frac{\partial{W}}{\partial{X}}$. 
