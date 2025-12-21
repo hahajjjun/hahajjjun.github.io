@@ -32,7 +32,7 @@ Studying **generative processes** of high-throughput biological measurements.
 - Severance Academic Award `May 2022`
 - Severance Academic Award `May 2023`
 - Yoo-Il Han Poster Award at Yonsei Medical Students' Colloquium `Sep 2023`
-- First Place Presentation Award at Biomedical Science Research Festival `Nov 2024`.
+- First Place Presentation Award at Biomedical Science Research Festival `Nov 2024`
 
 ---
 
