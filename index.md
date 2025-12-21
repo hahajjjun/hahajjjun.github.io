@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on September, 2025</span>
+<span style="color:grey">Updated on December, 2025</span>
 
 ## About
 
@@ -14,15 +14,25 @@ Studying **generative processes** of high-throughput biological measurements.
 
 <img src='./assets/figure.jpg'>
 
+---
+
 ## Publications
 - **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024, Molecules and Cells) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
 
-## Personal experiences
-- Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/), Istanbul, Turkey `Jun 2020`
+---
+
+## Research experiences
 - Internship at [TGILAB](https://www.tgilab.org/), Yonsei University, Seoul, Republic of Korea `Jun 2021 ~ Aug 2021` `Dec 2021 ~ Feb 2022`
 - Internship at [Korea Quantum Computing Co.](https://www.kqchub.com/), Busan, Republic of Korea `Jun 2022 ~ Aug 2022`
 - Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
 - Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Jan 2025`
+
+## Awards
+- Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
+- Severance Academic Award `May 2022`
+- Severance Academic Award `May 2023`
+- Yoo-Il Han Poster Award at Yonsei Medical Students' Colloquium `Sep 2023`
+- First Place Presentation Award at Biomedical Science Research Festival `Nov 2024`.
 
 ---
 
