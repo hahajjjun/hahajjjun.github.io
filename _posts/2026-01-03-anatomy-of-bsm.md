@@ -9,15 +9,25 @@ categories: ["Annotated BI"]
 ---
 
 ### Overview
-In this blog post, I will explain details and practical aspects underlying Evo2. 
-At a glance, we notice that Evo2 provides a template for deep consideration of tokenization, architecture design, training objective, and dataset distribution. 
-We therefore aim to introduce key concepts in biological sequence modelling, with Evo2 as an example.
+The ambitious journey to capture the long evolutionary history of biological sequences is reaching important landmarks; ESM3, Evo2, NTv3, and others; by implicitly learning the constraints underlying contemporary biological sequences.
+A previous blog post emphasized the importance of negative examples, which are often under-represented due to selective pressure. However, modern approaches struggle even with observable biological sequences.
+Evo2, a genomic sequence model trained on 9.3 trillion DNA base pairs from prokaryotic and eukaryotic genomes, is one of the open-sourced landmarks of this journey. It provides a valuable template considering tokenization, architecture design, zero-shot evaluation, probing and mechanistic interpretability analysis.
+We therefore aim to explain key ingredients in biological sequence modeling using Evo2 as an example.
 
 ### Tokenization
-We can intuitively think that the optimal tokenization strategy of biological sequences should somehow differ from those of natural languages.
-Despite conventional tokenizers in NLP field or classical sequence models that include BPE(byte pair encoding) and k-mer tokenization are promising approaches, there is a room for improvement in developing biologically informed tokenizers.
 
-One remarkable fact is that BPE tokenization are relatively more flexible that k-mer tokenizers due to the choice of vocabulary size and the choice of training corpus.
-We can modify BPE tokenizer to perform tokenization in different granularity(by modifying vocabulary size) and encourage it to explicitly capture biologically informative chunk of nucleotides ([Zhou et al.](https://arxiv.org/pdf/2512.17126)).
+| Evo2 used a byte-tokenizer
 
-Benchmark result from [Zhou et al.](https://arxiv.org/pdf/2512.17126) demonstrates that no single tokenizer consistently outperformed the others. This suggests that we can find an optimized tokenizer in a data-driven approach, which is recently realized by [Qiao et al.](https://arxiv.org/abs/2412.13716) and [Anonymous authors](https://openreview.net/pdf/0af9dfc7c2c6f83b726b55f01c5f0fb02aedb335.pdf).
+Beyond this simple statement, there are detailed considerations in choosing a tokenization approach.
+We should first note that conventional tokenizers in NLP field or classical sequence models that include BPE(byte pair encoding) and k-mer tokenization are promising approaches.
+
+However, we can question about the optimality of tokenizer and conjecture that the optimal tokenization strategy of biological sequences should somehow differ from those of natural languages.
+One remarkable fact is that BPE(byte-pair encoding) tokenization is an information-theoretic approach which is relatively more flexible that k-mer tokenizer due to the choice of vocabulary size and the choice of training corpus.
+Specifically, we can modify BPE tokenizer to perform tokenization in different granularity(by modifying vocabulary size) and encourage it to explicitly capture biologically informative chunk of nucleotides ([Zhou et al.](https://arxiv.org/pdf/2512.17126)).
+
+Benchmark result from [Zhou et al.](https://arxiv.org/pdf/2512.17126) demonstrates that no single tokenizer consistently outperformed the others. This suggests that we can find an optimized version of tokenizer in a data-driven approach, which is recently realized by [Qiao et al.](https://arxiv.org/abs/2412.13716) and [Anonymous authors](https://openreview.net/pdf/0af9dfc7c2c6f83b726b55f01c5f0fb02aedb335.pdf) (DNAChunker).
+
+We’d like to take a deeper look at learnable tokenizers exemplified in these appraoches.
+The motivation of introducing these adaptive appraoches are usually reasonable; since conventional approaches feel that they rely on heuristics.
+However, Evo2 has showed byte-tokenizer was sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modelling(StipeHypena2).
+No matter how learnable tokens are produced, we will expect that these optimized tokens might possess some important biological properties and perform well in long-range reasoning tasks.
