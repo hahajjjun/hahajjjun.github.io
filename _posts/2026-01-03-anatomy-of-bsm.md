@@ -16,9 +16,9 @@ We therefore aim to explain key ingredients in biological sequence modeling usin
 
 ### Tokenization
 
-| Evo2 used a byte-tokenizer
+| Evo 2 is trained using next-token-prediction on the byte-tokenized OpenGenome2 dataset.
 
-Beyond this simple statement, there are detailed considerations in choosing a tokenization approach.
+Beyond this simple statement, there might be detailed considerations in choosing a tokenization approach.
 We should first note that conventional tokenizers in NLP field or classical sequence models that include BPE(byte pair encoding) and k-mer tokenization are promising approaches.
 
 However, we can question about the optimality of tokenizer and conjecture that the optimal tokenization strategy of biological sequences should somehow differ from those of natural languages.
@@ -29,5 +29,10 @@ Benchmark result from [Zhou et al.](https://arxiv.org/pdf/2512.17126) demonstrat
 
 We’d like to take a deeper look at learnable tokenizers exemplified in these appraoches.
 The motivation of introducing these adaptive appraoches are usually reasonable; since conventional approaches feel that they rely on heuristics.
-However, Evo2 has showed byte-tokenizer was sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modelling(StipeHypena2).
-No matter how learnable tokens are produced, we will expect that these optimized tokens might possess some important biological properties and perform well in long-range reasoning tasks.
+However, Evo2 has showed byte-tokenizer was sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modelling (StripeHyena2).
+No matter how learnable tokens are produced, scientists will now expect that these optimized tokens might possess some important biological properties and perform well in long-range reasoning tasks.
+In this context, modifying BPE with proper biological considerations could be a lightweight alternative with enhanced transparency.
+
+### Sequence modelling
+
+| Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. 
