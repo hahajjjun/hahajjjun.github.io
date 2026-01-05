@@ -35,4 +35,30 @@ In this context, modifying BPE with proper biological considerations could be a 
 
 ### Sequence modelling
 
-| Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. 
+| Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. We roughly demonstrate step-by-step correspondence of convolutions to SSM(state space model), and SSM to self-attention mechanism. 
+
+**Correspondence of convollutions to SSM**
+
+A canonical linear SSM is decribed by the first-order difference equation:
+
+$$ x_{t+1} = Ax_t + Bu_t $$
+$$ y_t = Cx_t + Du_t $$
+
+Recurrently solving the system of equation yields a convolution representation of $y_t$:
+
+$$ y_t = \sum_{n=0}^t (CA^{t-n}B+D\delta_{t-n})u_n $$
+$$ (\text{Note } (f*g)[t] = \sum f[n]g[t-n]) \text{ for convolution operator } \* )$$
+
+For this system, we often specify the filter $h$ with respect to the SSM as:
+
+$$ h_t = CA^tB+D\delta_t (\text{ for } t \geq 0)$$
+
+**Correspondence SSM to self-attention**
+
+General self-attention is a map which performs:
+
+$$ y = \frac{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)V_j^T}{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)} $$
+
+where $Q_i, K_i, V_i$ are query, key, value projections of input $u$ and $phi(\cdot)$ is the nonlinear function.
+
+Computing the convolution can be performed by element-wide multiplication in the spectral domain.
