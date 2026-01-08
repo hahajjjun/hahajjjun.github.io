@@ -37,7 +37,7 @@ In this context, modifying BPE with proper biological considerations could be a 
 
 | Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. We roughly demonstrate step-by-step correspondence of convolutions to SSM(state space model), and SSM to self-attention mechanism. 
 
-**Correspondence of convollutions to SSM**
+**Correspondence of convolutions to SSM**
 
 A canonical linear SSM is decribed by the first-order difference equation:
 
@@ -57,8 +57,22 @@ $$ h_t = CA^tB+D\delta_t (\text{ for } t \geq 0)$$
 
 General self-attention is a map which performs:
 
-$$ y = \frac{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)V_j^T}{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)} $$
+$$ y_i = \frac{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)V_j^T}{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)} - (*)$$
 
-where $Q_i, K_i, V_i$ are query, key, value projections of input $u$ and $phi(\cdot)$ is the nonlinear function.
+where $Q_i, K_i, V_i$ are query, key, value projections of input $u$ and $\phi(\cdot)$ is the nonlinear function.
 
-Computing the convolution can be performed by element-wide multiplication in the spectral domain.
+This representation is often framed as applying attention vector $A=\text{softmax}(QK^T)$ to the value $V$, but we emphasize the decomposed version since we can efficienty calculate the result without explicitly constructing the matrix $A$ by sequentially calculating matrix muliplication with $\phi(Q), \phi(K)$.
+
+By substituting $\sum_{j=1}^i\phi(K_j)V_j$ to $S_i$ and choose $\phi(\cdot)$ s.t. $\phi(Q_i)^T\sum_{j=1}^i\phi(K_j)=1$, we can notice that (*) equation can be alternatively represented with the language of SSM:
+
+$$ S_i = S_{i-1}+\phi(K_i)V_i^T $$
+$$ y_i = \phi(Q_i)^TS_i $$
+
+We therefore can represent self-attention map as a SSM, and SSM can be viewed as a convolution operation.
+Since SSM can be computationally empowered by FlashConv algorithm, we might be able to approximate self-attention in a computationally efficient way.
+
+Hyena is alternatively applying convolutions in the time and then the frequency domain (or alternatively applying element-wise products in the time and frequency domain).
+One potential explanation for the effectiveness of this procedure is that the convolution in the time domain (elementwise multiplication in the frequency domain) increases the
+memory length, allowing for a broader context to be taken into account. 
+
+Computing the convolution can be performed by element-wise multiplication in the spectral domain.
