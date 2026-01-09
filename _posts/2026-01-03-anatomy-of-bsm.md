@@ -27,7 +27,6 @@ Specifically, we can modify BPE tokenizer to perform tokenization in different g
 
 Benchmark result from [Zhou et al.](https://arxiv.org/pdf/2512.17126) demonstrates that no single tokenizer consistently outperformed the others. This suggests that we can find an optimized version of tokenizer in a data-driven approach, which is recently realized by [Qiao et al.](https://arxiv.org/abs/2412.13716) and [Anonymous authors](https://openreview.net/pdf/0af9dfc7c2c6f83b726b55f01c5f0fb02aedb335.pdf) (DNAChunker).
 
-We’d like to take a deeper look at learnable tokenizers exemplified in these appraoches.
 The motivation of introducing these adaptive appraoches are usually reasonable; since conventional approaches feel that they rely on heuristics.
 However, Evo2 has showed byte-tokenizer was sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modelling (StripeHyena2).
 No matter how learnable tokens are produced, scientists will now expect that these optimized tokens might possess some important biological properties and perform well in long-range reasoning tasks.
@@ -53,7 +52,7 @@ For this system, we often specify the filter $h$ with respect to the SSM as:
 
 $$ h_t = CA^tB+D\delta_t (\text{ for } t \geq 0)$$
 
-**Correspondence SSM to self-attention**
+**Correspondence of SSM to self-attention**
 
 General self-attention is a map which performs:
 
@@ -61,18 +60,29 @@ $$ y_i = \frac{\phi(Q_i)^T\sum_{j=1}^i \phi(K_j)V_j^T}{\phi(Q_i)^T\sum_{j=1}^i \
 
 where $Q_i, K_i, V_i$ are query, key, value projections of input $u$ and $\phi(\cdot)$ is the nonlinear function.
 
-This representation is often framed as applying attention vector $A=\text{softmax}(QK^T)$ to the value $V$, but we emphasize the decomposed version since we can efficienty calculate the result without explicitly constructing the matrix $A$ by sequentially calculating matrix muliplication with $\phi(Q), \phi(K)$.
+This representation is often framed as applying attention vector $A=\text{softmax}(QK^T)$ to the value $V$, but we emphasize the decomposed version since we can efficienty calculate the result without explicitly constructing the matrix $A$, by sequentially calculating matrix muliplication with $\phi(Q), \phi(K)$.
 
-By substituting $\sum_{j=1}^i\phi(K_j)V_j$ to $S_i$ and choose $\phi(\cdot)$ s.t. $\phi(Q_i)^T\sum_{j=1}^i\phi(K_j)=1$, we can notice that (*) equation can be alternatively represented with the language of SSM:
+By substituting $\sum_{j=1}^i\phi(K_j)V_j$ to $S_i$ and choosing $\phi(\cdot)$ s.t. $\phi(Q_i)^T\sum_{j=1}^i\phi(K_j)=1$, we can notice that $(*)$ equation can be alternatively represented with the language of SSM:
 
 $$ S_i = S_{i-1}+\phi(K_i)V_i^T $$
 $$ y_i = \phi(Q_i)^TS_i $$
 
-We therefore can represent self-attention map as a SSM, and SSM can be viewed as a convolution operation.
+We therefore represent self-attention map as a SSM, and SSM is viewed as a convolution operation.
 Since SSM can be computationally empowered by FlashConv algorithm, we might be able to approximate self-attention in a computationally efficient way.
 
-Hyena is alternatively applying convolutions in the time and then the frequency domain (or alternatively applying element-wise products in the time and frequency domain).
-One potential explanation for the effectiveness of this procedure is that the convolution in the time domain (elementwise multiplication in the frequency domain) increases the
-memory length, allowing for a broader context to be taken into account. 
+Recall the fact that convolution can be performed by element-wise multiplication in the spectral domain, then Hyena can be viewd as an alternating application of convolutions in the time and frequency domain.
+[Poli et al.](https://arxiv.org/abs/2302.10866) abstractly explains the effectiveness of this procedure as:
+- **Convolution** in the **time** domain increases the **memory length**, allowing for a broader context to be taken into account
+- **Element-wise multiplication** in the **time** domain allows for more fine-grained **selection** of specific frequency components of the signal
 
-Computing the convolution can be performed by element-wise multiplication in the spectral domain.
+Now we can define Hyena operator as an extension of H3 mechanism:
+
+$$ H3(q,k,v) = A(q,k)v = D_q{S_\psi}D_k{S_\phi}, \text{ where } S_\psi, S_\phi \text{ are Toeplitz matrices of SSM with filters } \psi, \phi$$
+$$ Hyena(q,k,v) = A(q,k)v = D_x^N{S_x^N}...D_x^1{S_x^1}v : \text{ extension of H3 with arbitrary no. of projections }$$
+
+StripedHyena model was applied in Evo([Nguyen et al.](https://www.science.org/doi/10.1126/science.ado9336)), which is composed of Hyena operator and rotary attention.
+Extending StripedHyena, StripedHyena2 model applies multiple Hyena operators with inner filters designed with different principles: SE(short explicit), MR(medium regularized), and LI(long implicit).
+7B scale ablation experiments demonstrated that SE-MR-LI architecture surpassed alternative choices of design, where Evo2 utilizes this architecture for training model with 40B parameters.
+
+### Evaluation and Benchmarks
+We can think about tasks biological sequence model can achieve without task-specific fine-tuning: one is how model can generate diverse
