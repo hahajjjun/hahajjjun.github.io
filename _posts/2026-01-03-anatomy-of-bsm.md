@@ -85,4 +85,9 @@ Extending StripedHyena, StripedHyena2 model applies multiple Hyena operators wit
 7B scale ablation experiments demonstrated that SE-MR-LI architecture surpassed alternative choices of design, where Evo2 utilizes this architecture for training model with 40B parameters.
 
 ### Evaluation and Benchmarks
+| Perplexity, Long-context recall, Mutational effects, Variant pathogenicity
 We can think about tasks biological sequence model can achieve without task-specific fine-tuning: one is how model can generate diverse
+
+### Mechanistic Interpretability
+
+### Generative Design
