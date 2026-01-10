@@ -34,7 +34,9 @@ In this context, modifying BPE with proper biological considerations could be a 
 
 ### Sequence modelling
 
-| Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. We roughly demonstrate step-by-step correspondence of convolutions to SSM(state space model), and SSM to self-attention mechanism. 
+| Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. 
+
+We roughly demonstrate step-by-step correspondence of convolutions to SSM(state space model), and SSM to self-attention mechanism. 
 
 **Correspondence of convolutions to SSM**
 
@@ -46,7 +48,7 @@ $$ y_t = Cx_t + Du_t $$
 Recurrently solving the system of equation yields a convolution representation of $y_t$:
 
 $$ y_t = \sum_{n=0}^t (CA^{t-n}B+D\delta_{t-n})u_n $$
-$$ (\text{Note } (f*g)[t] = \sum f[n]g[t-n]) \text{ for convolution operator } \* )$$
+$$ (\text{Note } (f*g)[t] = \sum f[n]g[t-n]) \text{ for convolution operator } * )$$
 
 For this system, we often specify the filter $h$ with respect to the SSM as:
 
@@ -77,8 +79,10 @@ Recall the fact that convolution can be performed by element-wise multiplication
 
 Now we can define Hyena operator as an extension of H3 mechanism:
 
-$$ H3(q,k,v) = A(q,k)v = D_q{S_\psi}D_k{S_\phi}, \text{ where } S_\psi, S_\phi \text{ are Toeplitz matrices of SSM with filters } \psi, \phi$$
-$$ Hyena(q,k,v) = A(q,k)v = D_x^N{S_x^N}...D_x^1{S_x^1}v : \text{ extension of H3 with arbitrary no. of projections }$$
+$$ \text{H3}(q,k,v) = A(q,k)v = D_q{S_\psi}D_k{S_\phi}$$
+$$ \text{ where } S_\psi, S_\phi \text{ are Toeplitz matrices of SSM with filters } \psi, \phi$$
+$$ \text{Hyena}(q,k,v) = A(q,k)v = D_x^N{S_x^N}...D_x^1{S_x^1}v$$
+$$ :\text{ extension of H3 with arbitrary no. of projections }$$
 
 StripedHyena model was applied in Evo([Nguyen et al.](https://www.science.org/doi/10.1126/science.ado9336)), which is composed of Hyena operator and rotary attention.
 Extending StripedHyena, StripedHyena2 model applies multiple Hyena operators with inner filters designed with different principles: SE(short explicit), MR(medium regularized), and LI(long implicit).
@@ -86,8 +90,24 @@ Extending StripedHyena, StripedHyena2 model applies multiple Hyena operators wit
 
 ### Evaluation and Benchmarks
 | Perplexity, Long-context recall, Mutational effects, Variant pathogenicity
-We can think about tasks biological sequence model can achieve without task-specific fine-tuning: one is how model can generate diverse
+We have previously discussed what properties a biological sequence model might possess in an earlier [blog post](https://hahajjjun.github.io/annotated%20bi/2025/11/22/nlp.html).
+We were able to distinguish objectives that are achievable through fine-tuning and performing zero-shot inference(e.g. probing).
+
+
+In addition to these examples, Evo2 was also evaluated with novel benchmarks. 
+
+Briefly, the perplexity metric traditionally used in the NLP field was used for determining model architecture and demonstrating the benefit of model scale/context length.
+Additionally, Evo2 utilizes needle-in-a-haystack benchmark by synthetically inserting 100bp needles in a long sequence of haystack($2^9 - 2^{20}$ base pairs) to evaluate the retrieval strength. Formally, we can use the euclidean magnitude of the categorical jacobian([Zhang et al.](https://www.pnas.org/doi/10.1073/pnas.2406285121#eqn5)), which measures the effects on model predictions for the query when we mutate the needle sequence.
+
+For inferring variant effects, we can explicitly mutate the sequence and observe the difference of likelihood by using Evo2 as an oracle. Calculated likelihood difference itself can be used for inference of can be used to train a simple classifier in a supervised fashion, aiming at **variant fitness prediction, exon classification, gene/lncRNA essentiality prediction, and variant pathogenicity prediction**.
 
 ### Mechanistic Interpretability
+
+Over the past two decades, annotation and cataloging of genomic sequences have continuously advanced, with these results primarily obtained through observational studies. Generally speaking, if a comprehensive biological sequence model exists, we can leverage the catalog to annotate features and then utilize the model's rich extrapolatability to perform massive in silico evaluation and prioritization across the entire sequence.\
+
+I'd like to introduce SAE briefly before taking a closer look at the collected features.
+
+Specifically, Evo2 mapped annotation to features by collecting and comparing feature activations for annotated sequence elements associated with a specific biological question of interest.
+As expected, we can observe a hierarchy of features: a lot of feature variation account for high-level categories including species(semantic) to fine-grained associations such as protein secondary structure(structure), and organization of genome(ORF, intergenic). Furthermore, applying approaches used in the mechanistic interpretability field to design sequences that maximally activate specific features, discovering circuits, and automating these processes is also a promising direction.
 
 ### Generative Design
