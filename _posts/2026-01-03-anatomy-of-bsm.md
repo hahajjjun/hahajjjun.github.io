@@ -93,6 +93,7 @@ Extending StripedHyena, StripedHyena2 model applies multiple Hyena operators wit
 
 ### Evaluation and Benchmarks
 | Perplexity, Long-context recall, Mutational effects, Variant pathogenicity
+
 We have previously discussed what properties a biological sequence model might possess in an earlier [blog post](https://hahajjjun.github.io/annotated%20bi/2025/11/22/nlp.html).
 We were able to distinguish objectives that are achievable through fine-tuning and zero-shot inference(e.g. probing).
 
