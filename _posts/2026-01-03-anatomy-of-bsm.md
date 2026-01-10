@@ -46,11 +46,13 @@ We roughly demonstrate step-by-step correspondence of convolutions to SSM(state 
 A canonical linear SSM is described by the first-order difference equations:
 
 $$ x_{t+1} = Ax_t + Bu_t $$
+
 $$ y_t = Cx_t + Du_t $$
 
 Recurrently solving the systems of equation yields a convolution representation of $y_t$:
 
 $$ y_t = \sum_{n=0}^t (CA^{t-n}B+D\delta_{t-n})u_n $$
+
 $$ (\text{Note } (f*g)[t] = \sum f[n]g[t-n]) \text{ for convolution operator } * )$$
 
 For this system, we often specify the filter $h$ with respect to the SSM as:
@@ -70,6 +72,7 @@ This representation is often framed as applying attention vector $A=\text{softma
 By substituting $\sum_{j=1}^i\phi(K_j)V_j$ with $S_i$ and choosing $\phi(\cdot)$ s.t. $\phi(Q_i)^T\sum_{j=1}^i\phi(K_j)=1$, we can notice that $(*)$ equation can be alternatively represented with the language of SSM:
 
 $$ S_i = S_{i-1}+\phi(K_i)V_i^T $$
+
 $$ y_i = \phi(Q_i)^TS_i $$
 
 We therefore represent self-attention map as a SSM, and SSM is viewed as a convolution operation.
