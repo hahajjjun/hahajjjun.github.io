@@ -103,11 +103,18 @@ For inferring variant effects, we can explicitly mutate the sequence and observe
 
 ### Mechanistic Interpretability
 
-Over the past two decades, annotation and cataloging of genomic sequences have continuously advanced, with these results primarily obtained through observational studies. Generally speaking, if a comprehensive biological sequence model exists, we can leverage the catalog to annotate features and then utilize the model's rich extrapolatability to perform massive in silico evaluation and prioritization across the entire sequence.\
+| Batch-TopK SAE was trained on Evo 2’s representations at layer 26
 
-I'd like to introduce SAE briefly before taking a closer look at the collected features.
+Over the past two decades, annotation and cataloging of genomic sequences have continuously advanced, with these results primarily obtained through observational studies. Generally speaking, if a comprehensive biological sequence model exists, we can leverage the catalog to annotate features and then utilize the model's rich extrapolatability to perform massive in silico evaluation and prioritization across the entire sequence.
 
-Specifically, Evo2 mapped annotation to features by collecting and comparing feature activations for annotated sequence elements associated with a specific biological question of interest.
+SAE(sparse autoencoder) is a dictionary learning approach to decompose polysemantic neurons into features that activates with high specificity and sensitivity for the hypothesized context.
+We aspire that such dictionary learning approach have a sufficient capacity to decompose intermingled concepts into monosemantic ones at the level of human cognition, so we apply a sparsity regularization to make SAE features sparse(note that without sparsity regularization, if latent dimension is larger than the input, the identitify mapping will be the trivial solution under reconstruction error term as an objective).
+
+Compared to vanilla SAE, TopK-SAE(which applies L0 regularization instead of L1) are superior in terms of reducing dead latents([Gao et al.](https://arxiv.org/abs/2406.04093)), so Evo2 chose BatchTopK-SAE. Another noticable choice is that Evo2 selected layer 26(probably we could choose another layer, e.g. penultimate) to apply SAE an inspect the features, which is also reasonable considering that late layers(penultimate was optimal in this case)([Fel et al.](https://arxiv.org/abs/2306.07304v2)) tend to demonstrate higher concept importance evaluated with diverse ablation studies.
+
+Evo2 mapped annotation to features by collecting and comparing feature activations for annotated sequence elements associated with a specific biological question of interest.
 As expected, we can observe a hierarchy of features: a lot of feature variation account for high-level categories including species(semantic) to fine-grained associations such as protein secondary structure(structure), and organization of genome(ORF, intergenic). Furthermore, applying approaches used in the mechanistic interpretability field to design sequences that maximally activate specific features, discovering circuits, and automating these processes is also a promising direction.
 
 ### Generative Design
+
+| Generation of genome across the domain of life and guiding sequence towards target epigenomic signal
