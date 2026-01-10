@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Anatomy of Biological Sequence Modelling"
+title:  "Anatomy of Biological Sequence Modeling"
 subtitle: ""
 excerpt_separator: "<!--more-->"
 date:	2026-01-03
@@ -31,11 +31,11 @@ Specifically, we can modify BPE tokenizer to perform tokenization in different g
 Benchmark results from [Zhou et al.](https://arxiv.org/pdf/2512.17126) demonstrate that no single tokenizer consistently outperformed the others. This suggests that we can find an optimized version of tokenizer in a data-driven approach, which is recently realized by [Qiao et al.](https://arxiv.org/abs/2412.13716) and [Anonymous authors](https://openreview.net/pdf/0af9dfc7c2c6f83b726b55f01c5f0fb02aedb335.pdf) (DNAChunker).
 
 The motivation for introducing these adaptive approaches is usually reasonable; since conventional approaches feel that they rely on heuristics.
-However, Evo2 has shown that a byte-tokenizer is sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modelling (StripeHyena2).
+However, Evo2 has shown that a byte-tokenizer is sufficient to achieve long-range contextual reasoning (>1M base pairs) with proper considerations in sequence modeling (StripeHyena2).
 No matter how learnable tokens are produced, scientists will now expect that these optimized tokens might possess some important biological properties and perform well in long-range reasoning tasks.
 In this context, modifying BPE with proper biological considerations could be a lightweight alternative with enhanced transparency.
 
-### Sequence modelling
+### Sequence modeling
 
 | Evo 2 uses StripedHyena 2, the first multi-hybrid architecture based on input-dependent convolutions. 
 
