@@ -47,3 +47,4 @@ Computational **Biology**
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
 - [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
 - [Nature's Language Processing](https://hahajjjun.github.io/annotated%20bi/2025/11/22/nlp.html)
+- [Anatomy of Biological Sequence Modeling](https://hahajjjun.github.io/annotated%20bi/2026/01/03/anatomy-of-bsm.html)
