@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on January, 2026</span>
+<span style="color:grey">Updated on February, 2026</span>
 
 ## About
 
@@ -31,7 +31,7 @@ Studying **generative processes** of high-throughput biological measurements.
 - Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
 - Severance Academic Award `May 2022`
 - Severance Academic Award `May 2023`
-- Yoo-Il Han Best Poster Award at Yonsei Medical Students' Colloquium `Sep 2023`
+- New Il Han Best Poster Award at Yonsei Medical Students' Colloquium `Sep 2023`
 - Best Presentation Award at Biomedical Science Research Festival `Nov 2024`
 
 ---
