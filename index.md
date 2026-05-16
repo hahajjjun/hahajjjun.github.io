@@ -4,20 +4,24 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on February, 2026</span>
+<span style="color:grey">Updated on May, 2026</span>
 
 ## About
 
 M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.linkedin.com/in/junha-park-64454621b/)
 
-Studying **generative processes** of high-throughput biological measurements.
+Studying **generative processes** of high-throughput biomedical measurements.
 
 <img src='./assets/figure.png'>
 
 ---
 
 ## Publications
-- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024, Molecules and Cells) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+**Lead Authors**
+- **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park* (2026, Sci. Rep.) [[paper]](https://www.nature.com/articles/s41598-026-51023-x)
+
+**Contributing Authors**
+- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024, Mol. Cells) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
 
 ---
 
