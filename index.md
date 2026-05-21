@@ -12,8 +12,6 @@ M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.l
 
 Studying **generative processes** of high-throughput biomedical measurements.
 
-<img src='./assets/figure.png'>
-
 ---
 
 ## Publications
