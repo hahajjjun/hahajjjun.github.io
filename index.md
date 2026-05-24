@@ -48,7 +48,7 @@ Studying **generative processes** of high-throughput biomedical measurements.
 - [Human-machine interface in biological measurements: a case study of CSDE](https://hahajjjun.github.io/annotated%20bi/2026/02/25/CSDE.html)
 
 **Computational** Medicine
-- [Where and What for Large Volume Medical Images](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
+- [Where and What for Large Volume Medical Images]()
 
 Computational **Biology**
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
