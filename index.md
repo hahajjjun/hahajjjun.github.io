@@ -15,6 +15,7 @@ Studying **generative processes** of high-throughput biomedical measurements.
 ---
 
 ## Publications
+
 **Lead Authors**
 - **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park* (2026, Sci. Rep.) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
 
