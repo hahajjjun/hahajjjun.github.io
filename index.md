@@ -32,6 +32,8 @@ Study **generative processes** of high-throughput biomedical measurements.
 - Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
 - Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Dec 2024`
 
+---
+
 ## Awards
 - Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
 - Severance Academic Award `May 2022`
@@ -44,6 +46,8 @@ Study **generative processes** of high-throughput biomedical measurements.
 ## Engineering outside the lab
 - [Neural Architecture Search on Quantum Circuits](http://github.com/hahajjjun/Quantum-Neural-Architecture-Search) `Jun 2022`
 - [Online Learning Framework for Infant's Facial Expression Recognition](https://github.com/hahajjjun/InfantinO) `Dec 2022`
+
+---
 
 ## Posts
 
