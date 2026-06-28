@@ -4,11 +4,13 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on May, 2026</span>
+<span style="color:grey">Updated on June, 2026</span>
 
 ## About
 
 M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.linkedin.com/in/junha-park-64454621b/)
+
+<img src="./assets/main.jpg" alt="Main" width="300" height="300" />
 
 Studying **generative processes** of high-throughput biomedical measurements.
 
