@@ -12,8 +12,7 @@ M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.l
 
 <img src="./assets/main.jpg" alt="Main" width="300" height="300" />
 
-Studying **generative processes** of high-throughput biomedical measurements.
-
+Study **generative processes** of high-throughput biomedical measurements.
 ---
 
 ## Publications
@@ -30,7 +29,7 @@ Studying **generative processes** of high-throughput biomedical measurements.
 - Internship at [TGILAB](https://www.tgilab.org/), Yonsei University, Seoul, Republic of Korea `Jun 2021 ~ Aug 2021` `Dec 2021 ~ Feb 2022`
 - Internship at [Korea Quantum Computing Co.](https://www.kqchub.com/), Busan, Republic of Korea `Jun 2022 ~ Aug 2022`
 - Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
-- Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Jan 2025`
+- Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Dec 2024`
 
 ## Awards
 - Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
@@ -41,18 +40,20 @@ Studying **generative processes** of high-throughput biomedical measurements.
 
 ---
 
+## Engineering outside the lab
+- [Neural Architecture Search on Quantum Circuits](http://github.com/hahajjjun/Quantum-Neural-Architecture-Search) `Jun 2022`
+- [Online Learning Framework for Infant's Facial Expression Recognition](https://github.com/hahajjjun/InfantinO) `Dec 2022`
+
 ## Posts
 
-**Computational** Biology
+**Measurement** Layer
 - [Coalescing causal inference and foundation models](https://hahajjjun.github.io/annotated%20bi/2025/09/21/causal-fm.html)
 - [Backpropagation through the NMF block](https://hahajjjun.github.io/annotated%20bi/2025/12/14/backprop-nmf.html)
 - [Anatomy of Biological Sequence Modeling](https://hahajjjun.github.io/annotated%20bi/2026/01/03/anatomy-of-bsm.html)
 - [Human-machine interface in biological measurements: a case study of CSDE](https://hahajjjun.github.io/annotated%20bi/2026/02/25/CSDE.html)
-
-**Computational** Medicine
 - [Where and What for Large Volume Medical Images](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
 
-Computational **Biology**
+**Biomedical** Layer
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
 - [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
