@@ -8,9 +8,9 @@ layout: page
 
 ## About
 
-M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.linkedin.com/in/junha-park-64454621b/)
-
 <img src="./assets/main.jpg" alt="Main" width="300" height="300" />
+
+M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.linkedin.com/in/junha-park-64454621b/)
 
 Study **generative processes** of high-throughput biomedical measurements.
 
