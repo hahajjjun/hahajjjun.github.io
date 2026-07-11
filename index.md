@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on June, 2026</span>
+<span style="color:grey">Updated on July, 2026</span>
 
 ## About
 
@@ -34,18 +34,19 @@ Study **generative processes** of high-throughput biomedical measurements.
 
 ---
 
-## Awards
-- Silver medal at [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
-- Severance Academic Award `May 2022`
-- Severance Academic Award `May 2023`
-- New Il Han Best Poster Award at Yonsei Medical Students' Colloquium `Sep 2023`
-- Best Presentation Award at Biomedical Science Research Festival `Nov 2024`
+## Awards and Honors
+- Silver medal, [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
+- Severance Academic Award `May 2022`, `May 2023`
+- New Il Han Best Poster Award, Yonsei Medical Students' Colloquium `Sep 2023`
+- Best Presentation Award, Biomedical Science Research Festival `Nov 2024`
+- Creativity Award ([MoodStream](https://sites.google.com/view/mood-stream), Commendation of Air Force Chief of Staff (Personnel)), ROKAF startup challenge `May 2026`
 
 ---
 
-## Engineering outside the lab
+## Outside the lab
 - [Neural Architecture Search on Quantum Circuits](http://github.com/hahajjjun/Quantum-Neural-Architecture-Search) `Jun 2022`
 - [Online Learning Framework for Infant's Facial Expression Recognition](https://github.com/hahajjjun/InfantinO) `Dec 2022`
+- [Continuous Quantification of Mental Health via MoodStream](https://sites.google.com/view/mood-stream) `Apr 2026`
 
 ---
 
