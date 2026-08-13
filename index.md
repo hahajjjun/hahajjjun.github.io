@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on July, 2026</span>
+<span style="color:grey">Updated on August, 2026</span>
 
 ## About
 
@@ -16,13 +16,11 @@ Study **generative processes** of high-throughput biomedical measurements.
 
 ---
 
-## Publications
+## Publications and Preprints
 
-**Lead Authors**
-- **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park* (2026, Sci. Rep.) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
-
-**Contributing Authors**
-- **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang* (2024, Mol. Cells) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+- [J] **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang† (2024, _Mol. Cells_) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
+- [J] **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park† (2026, _Sci. Rep._) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
+- [P] **A genome-wide CRISPR activation map of surface protein expression in human CD4 T cells** <br/> Yutong V Wang, **Junha Park**, Min Cheol Kim, Thomas Mazumder, Krishna Sonpal, Matin Bikaran, Zachary Steinhart, Ralf Schmidt, Yang Sun, Su-Hyeon Lee, Alexander Marson, Chun Jimmie Ye†, Byungjin Hwang† [[preprint]](https://www.biorxiv.org/content/10.64898/2026.08.08.743670v1)
 
 ---
 
@@ -35,7 +33,7 @@ Study **generative processes** of high-throughput biomedical measurements.
 ---
 
 ## Awards and Honors
-- Silver medal, [International Chemistry Olympiad(IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
+- Silver medal, [International Chemistry Olympiad (IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
 - Severance Academic Award `May 2022`, `May 2023`
 - New Il Han Best Poster Award, Yonsei Medical Students' Colloquium `Sep 2023`
 - Best Presentation Award, Biomedical Science Research Festival `Nov 2024`
