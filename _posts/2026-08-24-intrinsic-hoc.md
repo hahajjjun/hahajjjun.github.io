@@ -22,7 +22,7 @@ The concept of _intrinsic-hoc_ approaches, discussed in [recent correspondence](
 The essential idea is that domain knowledge could be incorporated intrinsically into the modeling procedure rather than being applied only before or after prediction.
 In this sense, intrinsic-hoc is not a particular architecture. It is a way of organizing the relationship between prior knowledge, statistical learning, and prediction.
 
-The distinction among _ad hoc, post hoc, _and_ intrinsic-hoc_ approaches concerns where problem-specific knowledge enters a computational method.
+The distinction among _ad hoc, post hoc, and intrinsic-hoc_ approaches concerns where problem-specific knowledge enters a computational method.
 An ad hoc method is constructed specifically for a particular problem and may rely on assumptions or procedures tailored to that application. A post hoc approach separates prediction from subsequent interpretation or analysis.
 For example, a neural network may first be trained to predict a biological phenotype, after which an interpretation method is applied to determine which sequence features appear to influence the prediction.
 
@@ -35,7 +35,7 @@ If biological knowledge can specify part of the mechanism, there is a reason to 
 The recent work on prime-editing efficiency prediction provides a useful example ([OptiPrime](https://www.nature.com/articles/s41587-026-03261-7)).
 
 A sequence-based predictor can treat the relationship between pegRNA sequence and editing efficiency as a statistical mapping. 
-Given sufficiently large training datasets, a neural network can learn sequence representations and associate them with measured editing outcomes (e.g., DeepPrime).
+Given sufficiently large training datasets, a neural network can learn sequence representations and associate them with measured editing outcomes (e.g., [DeepPrime](https://www.cell.com/cell/fulltext/S0092-8674(23)00331-8)).
 
 The OptiPrime approach takes a different modeling perspective.
 Rather than representing prime editing only as a direct mapping from sequence to final efficiency, it incorporates a mechanistic description of the editing process.
