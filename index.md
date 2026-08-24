@@ -53,8 +53,9 @@ Study **generative processes** of high-throughput biomedical measurements.
 **Computational** Biology
 - [Coalescing causal inference and foundation models](https://hahajjjun.github.io/annotated%20bi/2025/09/21/causal-fm.html)
 - [Backpropagation through the NMF block](https://hahajjjun.github.io/annotated%20bi/2025/12/14/backprop-nmf.html)
-- [Anatomy of Biological Sequence Modeling](https://hahajjjun.github.io/annotated%20bi/2026/01/03/anatomy-of-bsm.html)
+- [Anatomy of biological sequence modeling](https://hahajjjun.github.io/annotated%20bi/2026/01/03/anatomy-of-bsm.html)
 - [Human-machine interface in biological measurements: a case study of CSDE](https://hahajjjun.github.io/annotated%20bi/2026/02/25/CSDE.html)
+- [Intrinsic-hoc methods](https://hahajjjun.github.io/research/2026/08/24/intrinsic-hoc.html)
 
 **Computational** Medicine
 - [Where and What for Large Volume Medical Images](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
@@ -62,5 +63,5 @@ Study **generative processes** of high-throughput biomedical measurements.
 Computational **Biology**
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
 - [Collection of genes: A sc-linker case study](https://hahajjjun.github.io/annotated%20bi/2025/07/02/gene-collections.html)
-- [Foundation Models, Surrogate Biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
+- [Foundation models, Surrogate biology](https://hahajjjun.github.io/annotated%20bi/2025/09/06/fm-sb.html)
 - [Nature's Language Processing](https://hahajjjun.github.io/annotated%20bi/2025/11/22/nlp.html)
