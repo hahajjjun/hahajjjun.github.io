@@ -13,7 +13,7 @@ The rapid advancement of deep learning has changed the practice of computational
 Large-scale sequencing, imaging, and perturbation experiments still matter, while increasingly expressive models can learn complex relationships from these measurements.
 In many applications, one typical strategy is to provide a model with sufficiently large datasets and allow it to learn a mapping between i/o with relatively few assumptions about the underlying mechanism.
 
-This data-driven approach is useful when the relevant structure is unknown or difficult to formulate explicitly.
+This approach is useful when the relevant structure is unknown or difficult to formulate explicitly.
 However, biological modeling differs from deep learning models because biological systems are governed by physical laws, biochemical mechanisms, and experimentally established relationships.
 These forms of prior knowledge are not merely useful for interpreting a model after training. 
 They can determine how a model should be constructed in the first place.
@@ -82,7 +82,7 @@ However, this also introduces a limitation.
 A mechanistic assumption that is incomplete or incorrect can constrain the model in the wrong direction.
 The advantage of intrinsic-hoc therefore depends on the quality of the prior knowledge being incorporated.
 
-This point is important because intrinsic-hoc should not be regarded as automatically superior to data-driven modeling.
+This point is important because intrinsic-hoc should not be regarded as automatically superior to typical data-driven modeling.
 It represents a different allocation of assumptions between the model and the data.
 
 When biological knowledge is weak, uncertain, or incomplete, a flexible data-driven model may be preferable.
