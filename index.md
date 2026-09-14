@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on August, 2026</span>
+<span style="color:grey">Updated on September, 2026</span>
 
 ## About
 
@@ -18,17 +18,9 @@ Study **generative processes** of high-throughput biomedical measurements.
 
 ## Publications and Preprints
 
-- [J] **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang† (_Mol. Cells_, 2024) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147)
-- [J] **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park† (_Sci. Rep._, 2026) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
-- [P] **A genome-wide CRISPR activation map of surface protein expression in human CD4 T cells** <br/> Yutong V Wang, **Junha Park**, Min Cheol Kim, Thomas Mazumder, Krishna Sonpal, Matin Bikaran, Zachary Steinhart, Ralf Schmidt, Yang Sun, Su-Hyeon Lee, Alexander Marson, Chun Jimmie Ye†, Byungjin Hwang† (_bioRxiv_, 2026) [[preprint]](https://www.biorxiv.org/content/10.64898/2026.08.08.743670v1)
-
----
-
-## Research experiences
-- Internship at [TGILAB](https://www.tgilab.org/), Yonsei University, Seoul, Republic of Korea `Jun 2021 ~ Aug 2021` `Dec 2021 ~ Feb 2022`
-- Internship at [Korea Quantum Computing Co.](https://www.kqchub.com/), Busan, Republic of Korea `Jun 2022 ~ Aug 2022`
-- Research associate at [MoNET](http://neuroimage.yonsei.ac.kr/), Yonsei University, Seoul, Republic of Korea `Mar 2022 ~ Oct 2023`
-- Research associate at [Hwang LAB](https://sites.google.com/view/bhwanglabyonsei/), Yonsei University, Seoul, Republic of Korea `Oct 2023 ~ Dec 2024`
+- [P] **A genome-wide CRISPR activation map of surface protein expression in human CD4 T cells** <br/> Yutong V Wang, **Junha Park**, Min Cheol Kim, Thomas Mazumder, Krishna Sonpal, Matin Bikaran, Zachary Steinhart, Ralf Schmidt, Yang Sun, Su-Hyeon Lee, Alexander Marson, Chun Jimmie Ye†, Byungjin Hwang† (_bioRxiv_, 2026) [[preprint]](https://www.biorxiv.org/content/10.64898/2026.08.08.743670v1) [[Hwang LAB]](https://sites.google.com/view/bhwanglabyonsei/)
+- [J] **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park† (_Sci. Rep._, 2026) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html) [[MoNET]](http://neuroimage.yonsei.ac.kr/)
+- [J] **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang† (_Mol. Cells_, 2024) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147) [[Hwang LAB]](https://sites.google.com/view/bhwanglabyonsei/)
 
 ---
 
