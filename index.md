@@ -8,7 +8,8 @@ layout: page
 
 ## About
 
-<img src="./assets/main.jpg" alt="Main" width="300" height="300" />
+
+<img src="./assets/JPark_Profile.jpg" alt="Main" width="150" />
 
 M.D. Candidate @ Yonsei University, College of Medicine. [Contact](https://www.linkedin.com/in/junha-park-64454621b/)
 
@@ -34,6 +35,9 @@ Study **generative processes** of high-throughput biomedical measurements.
 ---
 
 ## Outside the lab
+
+<img src="./assets/main.jpg" alt="Main" width="150" />
+
 - [Neural Architecture Search on Quantum Circuits](http://github.com/hahajjjun/Quantum-Neural-Architecture-Search) `Jun 2022`
 - [Online Learning Framework for Infant's Facial Expression Recognition](https://github.com/hahajjjun/InfantinO) `Dec 2022`
 - [Continuous Quantification of Mental Health via MoodStream](https://sites.google.com/view/mood-stream) `Apr 2026`
