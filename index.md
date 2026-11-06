@@ -4,7 +4,7 @@ layout: page
 # sidebar_link: true
 ---
 
-<span style="color:grey">Updated on September, 2026</span>
+<span style="color:grey">Updated on November, 2026</span>
 
 ## About
 
@@ -27,7 +27,8 @@ Study **generative processes** of high-throughput biomedical measurements.
 
 ## Awards and Honors
 - Silver medal, [International Chemistry Olympiad (IChO)](https://icho2020.tubitak.gov.tr/) `Jun 2020`
-- Severance Academic Award `May 2022`, `May 2023`
+- Severance Academic Award `May 2022`
+- Severance Academic Award `May 2023`
 - New Il Han Best Poster Award, Yonsei Medical Students' Colloquium `Sep 2023`
 - Best Presentation Award, Biomedical Science Research Festival `Nov 2024`
 - Creativity Award ([MoodStream](https://sites.google.com/view/mood-stream), Commendation of Air Force Chief of Staff (Personnel)), ROKAF startup challenge `May 2026`
@@ -53,7 +54,8 @@ Study **generative processes** of high-throughput biomedical measurements.
 - [Intrinsic-hoc methods](https://hahajjjun.github.io/research/2026/08/24/intrinsic-hoc.html)
 
 **Computational** Medicine
-- [Where and What for Large Volume Medical Images](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
+- [Where and what for large volume medical images](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html)
+- [Generic difficulty of a task](https://hahajjjun.github.io/research/2026/11/06/generic-difficulty.html)
 
 Computational **Biology**
 - [Unified perspective on GRN inference with external knowledge](https://hahajjjun.github.io/annotated%20bi/2025/03/07/unified-grn-inference.html)
