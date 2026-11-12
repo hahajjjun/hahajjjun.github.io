@@ -19,7 +19,7 @@ Study **generative processes** of high-throughput biomedical measurements.
 
 ## Publications and Preprints
 
-- [P] **Gene-level structure of prior knowledge and perturbation responses informs target-level predictability in prior-informed models** <br/> **Junha Park***, Hyungtai Sim*, Byungjin Hwang (_bioRxiv_, 2026) [[preprint]](https://www.biorxiv.org/content/10.64898/2026.11.08.765139v1)
+- [P] **Gene-level structure of prior knowledge and perturbation responses informs target-level predictability in prior-informed models** <br/> **Junha Park**\*, Hyungtai Sim\*, Byungjin Hwang (_bioRxiv_, 2026) [[preprint]](https://www.biorxiv.org/content/10.64898/2026.11.08.765139v1)
 - [P] **A genome-wide CRISPR activation map of surface protein expression in human CD4 T cells** <br/> Yutong V Wang, **Junha Park**, Min Cheol Kim, Thomas Mazumder, Krishna Sonpal, Matin Bikaran, Zachary Steinhart, Ralf Schmidt, Yang Sun, Su-Hyeon Lee, Alexander Marson, Chun Jimmie Ye†, Byungjin Hwang† (_bioRxiv_, 2026) [[preprint]](https://www.biorxiv.org/content/10.64898/2026.08.08.743670v1) 
 - [J] **Adaptive patch sampling and location-aware reasoning for whole body PET-CT multi-organ segmentation** <br/> **Junha Park**, Arthur Cho, Hae-Jeong Park† (_Sci. Rep._, 2026) [[paper]](https://www.nature.com/articles/s41598-026-51023-x) [[post]](https://hahajjjun.github.io/research/2026/05/16/where-and-what.html) 
 - [J] **Multiplexed multimodal single-cell technologies: From observation to perturbation analysis** <br/> Su-Hyeon Lee, **Junha Park**, Byungjin Hwang† (_Mol. Cells_, 2024) [[paper]](https://doi.org/10.1016/j.mocell.2024.100147) 
